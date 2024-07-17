@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata: 
+  labels: 
+    app.kubernetes.io/instance: rhoai-audio-0717
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: rhoai-audio-0717 
+  name: rhoai-audio-0717
+spec:
+  ports:
+  - port: 8501
+    protocol: TCP
+    targetPort: 8501
+  selector:
+    app.kubernetes.io/instance: rhoai-audio-0717 
